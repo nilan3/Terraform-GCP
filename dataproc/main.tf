@@ -63,7 +63,7 @@ resource "google_dataproc_cluster" "poccluster" {
     #   script      = "gs://dataproc-initialization-actions/ganglia/ganglia.sh"
     #   timeout_sec = 500
     # }
-    # Only needed if one master node is set up (non-HA mode)
+    # Only needed for non-HA mode (master_num_instances < 3)
     # initialization_action {
     #   script      = "gs://dataproc-initialization-actions/zookeeper/zookeeper.sh"
     #   timeout_sec = 5000

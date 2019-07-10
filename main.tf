@@ -23,3 +23,10 @@ module "dataproc" {
   worker_num_instances = 2
   worker_machine_type = "n1-standard-2"
 }
+
+module "spark" {
+  region = "${var.region}"
+  source = "./spark"
+  cluster_name = "poccluster"
+  bucket_name = "dataproc-poc-bucket"
+}
